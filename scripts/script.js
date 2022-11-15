@@ -23,7 +23,7 @@ function name_name(str,time = "Day"){
 const results = name_name("guy", "day");
 console.log(results);
 
-let shoppingList = ["chesse", "bread", "ham"]
+let shoppingList = ["chesse", "bread", "ham", "green cheese"]
 
 const ul_list = document.querySelector(".shopping"); 
 function populate(list){
@@ -58,3 +58,15 @@ function updateImage(){
     images.alt = "My dream"
 }
 updateImage();
+
+const newList = document.querySelectorAll(".shopping li")
+function goGreen(){
+
+    for (let i = 0; i < newList.length; i++)
+    {
+        if(newList[i].textContent.includes("green")){
+            newList[i].classList.add("greenText")
+        }
+    }
+}
+goGreen()
